@@ -8,12 +8,15 @@ use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
+
 {
   public function index()
   {
-    $user = Role::find(2)->users;
-    return $user;
-
-      
+    return 'xin caho';
+  }
+  public function test()
+  {
+    $name = 'cong minh ';
+    return $name ;
   }
 }

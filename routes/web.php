@@ -19,9 +19,11 @@ Route::get('/login',[LoginController::class,'index'])->name('login');
 Route::post('/login/store',[LoginController::class,'store']);
 Route::get('register',[RegisterController::class,'index'])->name('register');
 Route::post('/register/store',[RegisterController::class,'store']);
+Route::get('',[HomeController::class],'index')->name('trangchu');
+Route::get('/a',[HomeController::class],'tets');
  
     //admin 
 Route::prefix('admin')->middleware('auth','role')->group(function ()
 {
-
+//Route::get('/', );
 });
