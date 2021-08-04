@@ -12,7 +12,7 @@ class HomeController extends Controller
 {
   public function index()
   {
-    return 'xin caho';
+   return view('admin.layout.header');
   }
   public function test()
   {

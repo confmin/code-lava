@@ -26,7 +26,9 @@ class RegisterController extends Controller
         ],
             [
                 'fullname.required' => "Tên không thể để trống",
-                'pass' => 'Mật khẩu phải lớn hơn 6 ký tự'
+                'pass.min' => 'Mật khẩu phải lớn hơn 6 ký tự',
+                'email.required' => 'Email không được để trống',
+                'pass.required' => 'Mật khẩu không được để trống'
                 
             ]);
         $user = new User ;

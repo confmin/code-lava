@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\LoginController as AdminLoginController;
+use App\Http\Controllers\admin\MenuController;
 use App\Http\Controllers\front\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\front\LoginController;
@@ -19,11 +21,20 @@ Route::get('/login',[LoginController::class,'index'])->name('login');
 Route::post('/login/store',[LoginController::class,'store']);
 Route::get('register',[RegisterController::class,'index'])->name('register');
 Route::post('/register/store',[RegisterController::class,'store']);
-Route::get('',[HomeController::class],'index')->name('trangchu');
-Route::get('/a',[HomeController::class],'tets');
- 
+Route::get('',[HomeController::class,'index'])->name('trangchu');
     //admin 
-Route::prefix('admin')->middleware('auth','role')->group(function ()
+Route::prefix('admin')->middleware('auth')->group(function()
 {
-//Route::get('/', );
+    Route::get('/', function () {
+        $name = 'cong minh';
+        return view('admin.pages.index',compact('name'));
+    });
+    Route::get('/login',[AdminLoginController::class,'index']);
+
+    #MENU
+    Route::prefix('menu')->group(function ()
+    {
+        Route::get('add' , [MenuController::class,'create']);
+    });
 });
+
