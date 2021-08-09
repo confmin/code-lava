@@ -8,7 +8,7 @@
             <tr>
                 <th style="width: 50px">ID</th>
                 <th>Tên danh mục</th>
-                <th></th>
+                <th> s</th>
             </tr>
         </thead>
         <tbody>
