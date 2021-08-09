@@ -34,7 +34,7 @@
                 <div class="card-body">
                     <h2 class="title">Register</h2>
                     
-                    <form method="POST" action="{{url('register/store')}}">
+                    <form method="POST" action="">
                         @csrf
                         <div class="row row-space">
                             <div class="col-2">

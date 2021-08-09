@@ -17,24 +17,27 @@ use App\Http\Controllers\front\RegisterController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/login',[LoginController::class,'index'])->name('login');
+Route::get('/login',[LoginController::class,'index']);
 Route::post('/login/store',[LoginController::class,'store']);
 Route::get('register',[RegisterController::class,'index'])->name('register');
-Route::post('/register/store',[RegisterController::class,'store']);
+Route::post('/register',[RegisterController::class,'store']);
 Route::get('',[HomeController::class,'index'])->name('trangchu');
-    //admin 
-Route::prefix('admin')->middleware('auth')->group(function()
+    //admin
+Route::prefix('admin')->group(function()
 {
     Route::get('/', function () {
         $name = 'cong minh';
         return view('admin.pages.index',compact('name'));
     });
-    Route::get('/login',[AdminLoginController::class,'index']);
-
+    Route::get('/login',[AdminLoginController::class,'index'])->name('login');
+    Route::post('login',[AdminLoginController::class,'store']);
     #MENU
     Route::prefix('menu')->group(function ()
     {
         Route::get('add' , [MenuController::class,'create']);
+        Route::post('add', [MenuController::class,'store']);
+        Route::get('list',[MenuController::class,'index']);
+
     });
 });
 
