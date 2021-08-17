@@ -1,6 +1,5 @@
 @extends('admin.layout.master')
 @section('title','Danh sách Menu')
-@stop
 @section('content')
 
     <table class="table">
@@ -8,11 +7,12 @@
             <tr>
                 <th style="width: 50px">ID</th>
                 <th>Tên danh mục</th>
-                <th> s</th>
+                <th>Hoạt động</th>
+                <th>Update</th>
             </tr>
         </thead>
         <tbody>
-          {!!App\Helpers\Helpers::menu()!!}
+            {!! \App\Helpers\Helpers::menu($menus) !!}
         </tbody>
     </table>
 

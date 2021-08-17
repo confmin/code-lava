@@ -21,4 +21,6 @@
 <script src="{{url('resources/admin')}}/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{url('resources/admin')}}/dist/js/demo.js"></script>
-@yield('style')
+<script src="{{url('resources')}}/template/js/main.js"></script>
+
+@yield('script')

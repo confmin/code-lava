@@ -37,11 +37,11 @@
       </li>
 
       <!-- Messages Dropdown Menu -->
-   
+
             <!-- Message End -->
-        
+
       <!-- Notifications Dropdown Menu -->
-    
+
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>
@@ -97,18 +97,26 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard
+                Danh Mục
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../../index.html" class="nav-link">
+                <a href="{{route('add-menu')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
+                  <p>Thêm Danh Mục</p>
                 </a>
               </li>
             </ul>
+              <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                      <a href="{{route('list-menu')}}" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Danh Sách Danh Mục</p>
+                      </a>
+                  </li>
+              </ul>
           </li>
           <li class="nav-item">
             <a href="../widgets.html" class="nav-link">
@@ -119,9 +127,9 @@
               </p>
             </a>
           </li>
-        
-         
-    
+
+
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
@@ -137,7 +145,7 @@
                   <p>General Elements</p>
                 </a>
               </li>
-             
+
               <li class="nav-item">
                 <a href="../forms/validation.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -155,7 +163,7 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-            
+
               <li class="nav-item">
                 <a href="../tables/jsgrid.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -165,7 +173,7 @@
             </ul>
           </li>
           <li class="nav-header">EXAMPLES</li>
-        
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-envelope"></i>
@@ -181,7 +189,7 @@
                   <p>Inbox</p>
                 </a>
               </li>
-            
+
             </ul>
           </li>
           <li class="nav-item">
@@ -205,7 +213,7 @@
                   <p>Profile</p>
                 </a>
               </li>
-             
+
               <li class="nav-item">
                 <a href="../examples/projects.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -218,15 +226,15 @@
                   <p>Project Add</p>
                 </a>
               </li>
-              
-            
+
+
               <li class="nav-item">
                 <a href="../examples/contacts.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Contacts</p>
                 </a>
               </li>
-            
+
               <li class="nav-item">
                 <a href="../examples/contact-us.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -235,8 +243,8 @@
               </li>
             </ul>
           </li>
-         
-        
+
+
           <li class="nav-header">MISCELLANEOUS</li>
           <li class="nav-item">
             <a href="../../iframe.html" class="nav-link">
@@ -244,8 +252,8 @@
               <p>Tabbed IFrame Plugin</p>
             </a>
           </li>
-       
-          
+
+
       </nav>
       <!-- /.sidebar-menu -->
     </div>

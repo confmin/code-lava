@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="{{url('resources/admin')}}/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{url('resources/admin')}}/dist/css/adminlte.min.css">
+
   @yield('style')
 </head>
 <body class="hold-transition sidebar-mini">
@@ -29,6 +30,6 @@
   </div>
   <!-- /.content-wrapper -->
   @include('admin.partial.footer')
-  
+
 </body>
 </html>

@@ -19,15 +19,25 @@ class MenuServices
             $menu->content = $request->content;
             $menu->active = $request->active;
             $menu->save();
-        }
-        catch (Exception $e)
-        {
-            $request->session()->flash('error',$e->getMessage());
+            $request->session()->flash('suscess','Thêm thành công');
             return redirect()->back();
         }
-
-
+        catch (Exception $e) {
+            $request->session()->flash('error', $e->getMessage());
+        }
     }
+
+    public function getlist()
+    {
+        $result = Menu::orderby('id')->paginate(10);
+        return $result ;
+    }
+    public function getParent()
+    {
+        $result = Menu::where('parent_id',0)->get();
+        return $result ;
+    }
+
 
 }
 
