@@ -32,5 +32,20 @@ class MenuController extends Controller
         $menus = $this->menuservices->getlist();
         return view('admin.pages.list-menu',compact('menus'));
     }
+    public function delete(Request $request)
+    {
+    $result= $this->menuservices->delete($request);
+        if ($result) {
+            return response()->json([
+                'error' =>false,
+                'mess' => 'Xoá thành công'
+            ]);
+        }
+        return response()->json([
+            'error' => true,
+            
+        ]);
+
+    }
 
 }

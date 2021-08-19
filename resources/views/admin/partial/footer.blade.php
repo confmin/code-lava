@@ -23,4 +23,6 @@
 <script src="{{url('resources/admin')}}/dist/js/demo.js"></script>
 <script src="{{url('resources')}}/template/js/main.js"></script>
 
+
+
 @yield('script')

@@ -7,11 +7,28 @@ $.ajaxSetup({
  {
      if(confirm('Bạn có muốn xoá không ?'))
      {
-         $.ajax([
-             type: DELETE ,
-            
+         $.ajax({
+             type: 'DELETE' ,
+             url: 'delete/',
+             data: {id},
+             datatype: 'JSON',
+             success : function(result)
+             {
+                if(result.error === false)
+                {
+                    alert(result.mess);
+                    location.reload();
 
-         ])
+                }
+                else
+                {
+                    alert('Lỗi thử lại ')
+                }
+            }
+
+
+
+         })
      }
 };
 

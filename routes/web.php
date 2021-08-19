@@ -37,6 +37,7 @@ Route::prefix('admin')->group(function()
         Route::get('add' , [MenuController::class,'create'])->name('add-menu');
         Route::post('add', [MenuController::class,'store']);
         Route::get('list',[MenuController::class,'index'])->name('list-menu');
+        Route::delete('delete',[MenuController::class, 'delete']);
 
     });
 });

@@ -13,9 +13,10 @@
           <input type="text" class="form-control" id="title" name="title" placeholder="Nhập tên danh mục">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Danh Mục Cha</label>
+          <label for="">Danh Mục Cha</label>
             <select class="form-control" name="parent" id="parent">
-                @foreach($menus as $key=>$menu)
+                <option value="0">Danh Mục Cha</option>
+                @foreach($menus as $menu)
 
                         <option value="{{$menu->id}}">{{$menu->name}}</option>
 
@@ -50,5 +51,5 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
     </form>
-  </div>
+
   @endsection

@@ -34,10 +34,12 @@ class MenuServices
     }
     public function getParent()
     {
-        $result = Menu::where('parent_id',0)->get();
-        return $result ;
+        return Menu::where('parent_id',0)->get();
     }
-
+    public function delete($request)
+    {
+        return Menu::find($request->id)->delete();
+    }
 
 }
 
