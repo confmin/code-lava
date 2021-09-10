@@ -1,7 +1,6 @@
 @extends('admin.layout.master')
 @section('title','Add')
 @section('content')
-    @include('layout.alert')
 
     <div class="card card-primary">
 

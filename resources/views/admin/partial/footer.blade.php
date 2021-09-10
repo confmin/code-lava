@@ -24,5 +24,3 @@
 <script src="{{url('resources')}}/template/js/main.js"></script>
 
 
-
-@yield('script')

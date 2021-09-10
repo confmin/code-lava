@@ -38,6 +38,8 @@ Route::prefix('admin')->group(function()
         Route::post('add', [MenuController::class,'store']);
         Route::get('list',[MenuController::class,'index'])->name('list-menu');
         Route::delete('delete',[MenuController::class, 'delete']);
+        Route::get('edit/{id}',[MenuController::class,'edit']);
+        Route::post('update',[MenuController::class.'update']);
 
     });
 });

@@ -12,8 +12,11 @@
   <link rel="stylesheet" href="{{url('resources/admin')}}/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{url('resources/admin')}}/dist/css/adminlte.min.css">
+  <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 
-  @yield('style')
+
+    @yield('style')
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -28,8 +31,12 @@
        @yield('content')
     <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
-  @include('admin.partial.footer')
 
+
+<!-- /.content-wrapper -->
+  @include('admin.partial.footer')
+    <script>
+        @yield('script')
+    </script>
 </body>
 </html>
